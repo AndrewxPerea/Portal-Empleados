@@ -33,6 +33,9 @@ def pages(request):
 
         html_template = loader.get_template('home/' + load_template)
         return HttpResponse(html_template.render(context, request))
+  
+        
+       
 
     except template.TemplateDoesNotExist:
 
@@ -42,3 +45,4 @@ def pages(request):
     except:
         html_template = loader.get_template('home/page-500.html')
         return HttpResponse(html_template.render(context, request))
+    
